@@ -1,0 +1,40 @@
+ <!-- Freelancer Listesi-->
+ <div class="col-md-12 col-lg-8 col-xl-9">
+    <div class="row">
+
+        <% for(let i=0; i< freelancers.length; i++){ %>
+            <!-- Freelancer-->
+            <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="freelance-widget">
+                    <div class="freelance-content">
+                        <a data-bs-toggle="modal" href="#rating" class="favourite"><i
+                                class="fas fa-star"></i></a>
+                        <div class="freelance-img">
+                            <a href="#">
+                                <img src="assets/img/user/avatar-1.jpg" alt="User Image">
+                                <span class="verified"><i class="fas fa-check-circle"></i></span>
+                            </a>
+                        </div>
+                        <div class="freelance-info">
+                            <h3><a href="#">
+                                    <%= freelancers[i].free_name %>
+                                </a></h3>
+                            <div class="freelance-specific">Uzmanlık Alanı: <br>
+                                <%= freelancers[i].free_alan %>
+                            </div>
+                            <div class="freelancers-price">
+                                <%= freelancers[i].free_fiyat %> Tl/saat
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-hover">
+                        <a href="/freelancers/<%= freelancers[i].slug %>"" class="btn-cart" tabindex="-1">Profiline
+                            Göz At</a>
+                    </div>
+                </div>
+            </div>
+            <!--Freelancer bitti-->
+            <% } %>
+
+    </div>
+</div>
